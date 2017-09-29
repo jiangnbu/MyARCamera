@@ -43,6 +43,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Release any cached data, images, etc that aren't in use.
     }
     
+    
+    /// 增加照片相框
+    ///
+    /// - Parameter image: <#image description#>
+    /// - Returns: <#return value description#>
     func imageAddBorder(image:UIImage) -> UIImage! {
         let screenRect = UIScreen.main.bounds
         let imageView = UIImageView.init(frame: CGRect.init(x: screenRect.origin.x, y: screenRect.origin.y, width: image.size.width, height: image.size.height))
@@ -94,7 +99,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     // MARK: 点击行为交互
-    
     @IBAction func handleCleanButton(_ sender: UIButton) {
         setupScene()
     }
@@ -128,22 +132,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             return
         }
         
-        // 室外： 500 、 -1.5
-        // 室内： 4000 / -0.2
-        
         let imagePlane:SCNPlane
         imagePlane = SCNPlane.init(width: sceneView.bounds.width/4000, height: sceneView.bounds.height/4000)
         let tmpImage = imageAddBorder(image: sceneView.snapshot())
-        let tmpDict = NSDictionary(object: tmpImage, forKey: "image" as NSCopying)
+        let tmpDict = NSDictionary(object: tmpImage!, forKey: "image" as NSCopying)
         mutDataArray.add(tmpDict)
         imagePlane.firstMaterial?.diffuse.contents = tmpImage
         imagePlane.firstMaterial?.lightingModel = SCNMaterial.LightingModel.constant
         
-        
         let planeNode = SCNNode.init(geometry: imagePlane)
         sceneView.scene.rootNode.addChildNode(planeNode)
         
-        // 完全不理解这是什么意思
         // 创建转化矩阵，将截图放置在相机前 20 cm 处
         var translation = matrix_identity_float4x4
         translation.columns.3.z = -0.2
