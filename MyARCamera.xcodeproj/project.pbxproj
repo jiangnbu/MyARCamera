@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6664D9B41F7DF11D0094AFA1 /* Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664D9B31F7DF11D0094AFA1 /* Extenions.swift */; };
 		66E0EE011F7DEF61002C4059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E0EE001F7DEF61002C4059 /* AppDelegate.swift */; };
 		66E0EE031F7DEF61002C4059 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E0EE021F7DEF61002C4059 /* art.scnassets */; };
 		66E0EE051F7DEF61002C4059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E0EE041F7DEF61002C4059 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6664D9B31F7DF11D0094AFA1 /* Extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenions.swift; sourceTree = "<group>"; };
 		66E0EDFD1F7DEF61002C4059 /* MyARCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyARCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E0EE001F7DEF61002C4059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E0EE021F7DEF61002C4059 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6664D9B01F7DF0E80094AFA1 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				6664D9B31F7DF11D0094AFA1 /* Extenions.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
 		66E0EDF41F7DEF61002C4059 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 		66E0EDFF1F7DEF61002C4059 /* MyARCamera */ = {
 			isa = PBXGroup;
 			children = (
+				6664D9B01F7DF0E80094AFA1 /* Code */,
 				66E0EE001F7DEF61002C4059 /* AppDelegate.swift */,
 				66E0EE021F7DEF61002C4059 /* art.scnassets */,
 				66E0EE041F7DEF61002C4059 /* ViewController.swift */,
@@ -264,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E0EE051F7DEF61002C4059 /* ViewController.swift in Sources */,
+				6664D9B41F7DF11D0094AFA1 /* Extenions.swift in Sources */,
 				66E0EE011F7DEF61002C4059 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
