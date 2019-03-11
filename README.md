@@ -1,5 +1,5 @@
 # MyARCamera
-##2017 new-dada hackathon 
+## 2017 new-dada hackathon 
 
 AR相机，支持AR拍照，保存相册功能
 
